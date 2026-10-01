@@ -1,50 +1,104 @@
-plugins {
-    id 'com.android.application'
-    id 'org.jetbrains.kotlin.android'
-}
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp">
 
-android {
-    compileSdk 36
+    <!-- Park Name -->
+    <TextView
+        android:id="@+id/park_name"
+        android:text="Park Name"
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/park_image"
+        />
 
-    defaultConfig {
-        applicationId "com.codepath.nationalparksapp"
-        minSdk 21
-        targetSdk 34
-        versionCode 1
-        versionName "1.0"
+    <!-- Park Description -->
+    <TextView
+        android:id="@+id/park_description"
+        android:text="Description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/park_name"
+        app:layout_constraintStart_toEndOf="@+id/park_image"
+        />
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-    }
+    <ImageView
+        android:id="@+id/park_image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:contentDescription="Park Image"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_gallery"
 
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
-    }
+        />
 
-    buildFeatures {
-        buildConfig = true
-    }
+    <TextView
+        android:id="@+id/park_location"
+        android:text="Park Location"
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/park_description"
+        app:layout_constraintStart_toEndOf="@+id/park_image"
+        />
 
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
-    }
-    kotlinOptions {
-        jvmTarget = "11"
-    }
-    namespace 'com.codepath.nationalparks'
-}
+</androidx.constraintlayout.widget.ConstraintLayout>
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp">
 
-dependencies {
+    <!-- Park Name -->
+    <TextView
+        android:id="@+id/park_name"
+        android:text="Park Name"
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/park_image"
+        />
 
-    implementation 'androidx.core:core-ktx:1.16.0'
-    implementation 'androidx.appcompat:appcompat:1.7.1'
-    implementation 'com.google.android.material:material:1.12.0'
-    implementation 'com.google.code.gson:gson:2.13.1'
-    implementation 'androidx.constraintlayout:constraintlayout:2.2.1'
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.2.1'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
-}
+    <!-- Park Description -->
+    <TextView
+        android:id="@+id/park_description"
+        android:text="Description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/park_name"
+        app:layout_constraintStart_toEndOf="@+id/park_image"
+        />
+
+    <ImageView
+        android:id="@+id/park_image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:contentDescription="Park Image"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_gallery"
+
+        />
+
+    <TextView
+        android:id="@+id/park_location"
+        android:text="Park Location"
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/park_description"
+        app:layout_constraintStart_toEndOf="@+id/park_image"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
